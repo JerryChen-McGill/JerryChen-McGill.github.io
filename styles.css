@@ -87,7 +87,7 @@ header {
     flex-direction: column;
 }
 
-.project img {
+.project .project-header img {
     width: 56px;
     height: 56px;
     border-radius: 12px;
@@ -153,12 +153,12 @@ header {
     bottom: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 1200px;
+    width: 200px;
+    height: 200px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 999;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project .link-with-image:hover .hover-preview {
@@ -214,5 +214,5 @@ a:hover {
 
 /* 隐藏图片 */
 .hover-image {
-    display: block;
+    display: none;
 }
