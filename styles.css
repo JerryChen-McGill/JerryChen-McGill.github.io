@@ -49,11 +49,19 @@ header {
 }
 
 /* 项目部分样式 */
+.projects {
+    padding: 20px;
+    background: #f8faff;
+    margin: 20px;
+}
+
 .projects .cards-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
+    justify-content: flex-start;
+    width: 100%;  /* 确保容器占满宽度 */
 }
 
 .project {
@@ -61,12 +69,13 @@ header {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    min-width: 300px;
-    max-width: calc(33.33% - 14px);
+    flex: 0 0 calc(25% - 15px);  /* 修改这里：使用 flex-basis，禁止伸缩 */
+    min-width: 210px;
+    max-width: calc(25% - 15px);
     display: flex;
     flex-direction: column;
     gap: 12px;
+    height: 294px;
 }
 
 .project-header {
@@ -154,19 +163,23 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 999;
     object-fit: contain;
-    pointer-events: none;
+    background-color: white;
+    opacity: 1 !important;
+    transition: none;
 }
 
-/* 修改悬停和点击的显示逻辑 */
+/* 显示时的样式 */
 .link-with-image:hover .hover-preview,
 .link-with-image:focus .hover-preview,
 .link-with-image.active .hover-preview {
     display: block;
+    opacity: 1 !important;
+    visibility: visible;
 }
 
 /* 添加点击激活的样式 */
 .link-with-image.active {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .hover-preview::after {
@@ -243,8 +256,23 @@ a:hover {
 }
 
 /* 媒体查询 */
+@media (max-width: 1200px) {
+    .project {
+        flex: 0 0 calc(33.33% - 14px);
+        max-width: calc(33.33% - 14px);
+    }
+}
+
 @media (max-width: 768px) {
     .project {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex: 0 0 100%;
         max-width: 100%;
     }
 }
