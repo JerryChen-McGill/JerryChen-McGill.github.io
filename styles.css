@@ -149,6 +149,7 @@ header {
     width: fit-content;
     position: relative;
     cursor: pointer;
+    text-decoration: none;  /* 去掉下划线 */
 }
 
 .project .link-with-image:hover {
@@ -207,10 +208,9 @@ header {
 
 /* 修改关于我部分样式 */
 .about .intro-container {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: none;  /* 移除白色背景 */
+    padding: 0;       /* 移除内边距 */
+    box-shadow: none; /* 移除阴影 */
 }
 
 .about p {
@@ -343,4 +343,24 @@ footer p {
 
 .link-with-note:hover {
     background: #e61e37;  /* 稍深的红色用于悬停效果 */
+}
+
+/* 修改笔记部分的样式 */
+.news article h3 {
+    margin-bottom: 10px;
+}
+
+.news article h3 a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.news article h3 a:hover {
+    text-decoration: underline;
+}
+
+/* 隐藏原来的链接 */
+.news article > a {
+    display: none;
 }
