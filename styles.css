@@ -18,10 +18,10 @@ body {
 
 /* 头部样式 */
 header {
-    background: #a5c858;
-    color: #fff;
     padding: 20px 0;
     text-align: center;
+    color: #333;  /* 改为黑色文字 */
+    background: none;  /* 移除背景色 */
 }
 
 /* 统一section样式 */
@@ -243,21 +243,28 @@ header {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #a5c858;
-    color: #fff;
+    background: none;  /* 移除背景色 */
+    color: #333;  /* 改为黑色文字 */
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
 /* 链接样式 */
-a {
-    color: #1f51e7b9;
+footer a {
+    color: #333;  /* 链接也改为黑色 */
     text-decoration: none;
 }
 
-a:hover {
+footer a:hover {
     text-decoration: underline;
+}
+
+/* 确保底部文字清晰可见 */
+footer p {
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 /* 媒体查询 */
