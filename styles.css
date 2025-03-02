@@ -21,23 +21,15 @@ header {
     text-align: center;
 }
 
-/* 关于我部分样式 */
-.about {
-    padding: 20px;
-    background: #fff;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* 项目部分样式 */
-.projects {
+/* 统一section样式 */
+.about, .projects, .news {
     padding: 20px;
     background: #f8faff;
     margin: 20px;
 }
 
-.projects h2 {
+/* 统一标题样式 */
+.about h2, .projects h2, .news h2 {
     font-size: 24px;
     margin-bottom: 20px;
     margin-left: 10px;
@@ -45,7 +37,8 @@ header {
     align-items: center;
 }
 
-.projects h2::before {
+/* 统一标题前的装饰 */
+.about h2::before, .projects h2::before, .news h2::before {
     content: '';
     display: inline-block;
     width: 24px;
@@ -55,6 +48,7 @@ header {
     margin-right: 10px;
 }
 
+/* 项目部分样式 */
 .projects .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -179,19 +173,52 @@ header {
     display: none;
 }
 
-/* 新闻报道部分样式 */
-.news {
+/* 修改新闻文章样式 */
+.news article {
+    background: #ffffff;
+    border-radius: 12px;
     padding: 20px;
-    background: #fff;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.news article:last-child {
+    margin-bottom: 0;
+}
+
+/* 修改关于我部分样式 */
+.about .intro-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.about p:last-child {
+    margin-bottom: 0;
+}
+
+/* 移除旧的样式 */
+.about {
+    box-shadow: none;
+}
+
+/* 移除之前的卡片样式 */
+.about p {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
 }
 
 .news article {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: none;
 }
 
 /* 底部样式 */
