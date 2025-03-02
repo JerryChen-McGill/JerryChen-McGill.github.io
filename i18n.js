@@ -51,7 +51,7 @@ const translations = {
         "notes.article2.desc": "我也想玩...",
         
         "footer.contact": "联系我:",
-        "footer.email": "邮箱：chenshuaichina@outlook.com"
+        "footer.email": "chenshuaichina@outlook.com"
     },
     en: {
         "title": "Jerry Chen",
@@ -104,7 +104,7 @@ const translations = {
         "notes.article2.desc": "I want to play too...",
         
         "footer.contact": "Contact Me:",
-        "footer.email": "Email: chenshuaichina@outlook.com"
+        "footer.email": "chenshuaichina@outlook.com"
     }
 };
 
