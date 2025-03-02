@@ -15,7 +15,7 @@ body {
 
 /* 头部样式 */
 header {
-    background: #a1ec30b9;
+    background: #a5c858;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -140,6 +140,7 @@ header {
     margin-top: auto;
     width: fit-content;
     position: relative;
+    cursor: pointer;
 }
 
 .project .link-with-image:hover {
@@ -159,10 +160,19 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 999;
     object-fit: contain;
+    pointer-events: none;
 }
 
-.project .link-with-image:hover .hover-preview {
+/* 修改悬停和点击的显示逻辑 */
+.link-with-image:hover .hover-preview,
+.link-with-image:focus .hover-preview,
+.link-with-image.active .hover-preview {
     display: block;
+}
+
+/* 添加点击激活的样式 */
+.link-with-image.active {
+    opacity: 0.8;
 }
 
 .hover-preview::after {
@@ -188,7 +198,7 @@ header {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #a1ec30b9;
+    background: #a5c858;
     color: #fff;
     position: relative;
     bottom: 0;
@@ -215,4 +225,38 @@ a:hover {
 /* 隐藏图片 */
 .hover-image {
     display: none;
+}
+
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+}
+
+.lang-btn.active {
+    color: #4285f4;
+    font-weight: bold;
+}
+
+.lang-btn:hover {
+    color: #4285f4;
+}
+
+.language-switch span {
+    color: #ddd;
+    margin: 0 4px;
 }
