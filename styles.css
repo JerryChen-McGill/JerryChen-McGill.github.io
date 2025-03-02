@@ -315,3 +315,20 @@ a:hover {
     color: #ddd;
     margin: 0 4px;
 }
+
+.link-with-note {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ff2442;  /* 小红书的红色 */
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: auto;
+    width: fit-content;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.link-with-note:hover {
+    background: #e61e37;  /* 稍深的红色用于悬停效果 */
+}

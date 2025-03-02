@@ -23,6 +23,24 @@ const translations = {
         "projects.card3.desc": "简易易用的彩纸，支持360度全色调节，满足各种场景需求。",
         "projects.card3.button": "在 微信小程序 查看",
         
+        "projects.card4.title": "藏头诗生成器",
+        "projects.card4.badge": "春节期间爆火的小程序",
+        "projects.card4.desc": "只要输入你的名字，你就能在几秒钟之内得到一首藏头诗。非常适合用来给他人送有中国文化底蕴的祝福。",
+        "projects.card4.button": "在 微信小程序 查看",
+        "projects.card4.note_button": "看小红书介绍笔记",
+        
+        "projects.card5.title": "极简贪吃蛇",
+        "projects.card5.badge": "0按钮贪吃蛇游戏",
+        "projects.card5.desc": "没有按钮的贪吃蛇小游戏，让你专注于游戏本身，享受从未有过的贪吃蛇游戏的快乐。",
+        "projects.card5.button": "在 微信小程序 查看",
+        "projects.card5.note_button": "看小红书介绍笔记",
+        
+        "projects.card6.title": "电子骰子",
+        "projects.card6.badge": "聚会抽签游戏必备",
+        "projects.card6.desc": "这是一个电子骰子，只要摇一摇手机，你就能像摇骰子一样得到一个点数。以后聚会玩游戏，再也不需要带骰子了。用电子骰子就可以。逼真的音效和振动效果，让你拥有和摇真骰子一样的体验。",
+        "projects.card6.button": "在 微信小程序 查看",
+        "projects.card6.note_button": "看小红书介绍笔记",
+        
         "notes.title": "我的笔记",
         "notes.article1.title": "花了23分钟开发了个小程序，会有人用吗？",
         "notes.article1.link": "链接",
@@ -57,6 +75,24 @@ const translations = {
         "projects.card3.badge": "Top 20 in Category within 3 Days",
         "projects.card3.desc": "Simple and easy-to-use color paper, supporting 360° color adjustment for all scenarios.",
         "projects.card3.button": "View on WeChat Mini Program",
+        
+        "projects.card4.title": "Acrostic Poem Generator",
+        "projects.card4.badge": "Viral Mini Program during Spring Festival",
+        "projects.card4.desc": "Enter your name and get an acrostic poem in seconds. Perfect for sending culturally rich Chinese blessings to others.",
+        "projects.card4.button": "View on WeChat Mini Program",
+        "projects.card4.note_button": "View Intro on RedNote",
+        
+        "projects.card5.title": "Minimalist Snake",
+        "projects.card5.badge": "Zero-Button Snake Game",
+        "projects.card5.desc": "A buttonless snake game that lets you focus purely on the gameplay, enjoying an unprecedented snake game experience.",
+        "projects.card5.button": "View on WeChat Mini Program",
+        "projects.card5.note_button": "View Intro on RedNote",
+        
+        "projects.card6.title": "Digital Dice",
+        "projects.card6.badge": "Essential for Party Games",
+        "projects.card6.desc": "A digital dice that gives you a number with just a shake of your phone. No need to bring physical dice to parties anymore. With realistic sound effects and vibration feedback, it provides an authentic dice-rolling experience.",
+        "projects.card6.button": "View on WeChat Mini Program",
+        "projects.card6.note_button": "View Intro on RedNote",
         
         "notes.title": "My Notes",
         "notes.article1.title": "Developed a Mini Program in 23 Minutes - Will Anyone Use It?",
