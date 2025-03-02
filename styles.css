@@ -78,7 +78,7 @@ header {
 .project-header {
     display: flex;
     gap: 15px;
-    margin-bottom: 15px;
+    align-items: flex-start;
 }
 
 .project-content {
@@ -91,13 +91,18 @@ header {
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.project-title-container {
+    flex: 1;
 }
 
 .project-title {
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-bottom: 4px;
 }
 
 .project h3 {
@@ -134,11 +139,34 @@ header {
     font-size: 14px;
     margin-top: auto;
     width: fit-content;
+    position: relative;
 }
 
 .project .link-with-image:hover {
     text-decoration: none;
     opacity: 0.9;
+}
+
+.hover-preview {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    object-fit: cover;
+}
+
+.project .link-with-image:hover .hover-preview {
+    display: block;
+}
+
+.hover-preview::after {
+    display: none;
 }
 
 /* 新闻报道部分样式 */
