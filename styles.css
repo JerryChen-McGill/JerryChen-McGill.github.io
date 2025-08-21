@@ -1,308 +1,28 @@
-/* 重置默认样式 */
+/* 重置和基础样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 设置全局字体 */
 body {
-    margin: 0;
-    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: linear-gradient(135deg, #c5a7ee 0%, #bfdff2 100%);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 20px;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* 头部样式 */
-header {
-    padding: 20px 0;
-    text-align: center;
-    color: #333;  /* 改为黑色文字 */
-    background: none;  /* 移除背景色 */
-}
-
-/* 统一section样式 */
-.about, .projects, .news {
-    background: rgba(255, 255, 255, 0.8);  /* 白色半透明背景 */
-    backdrop-filter: blur(10px);           /* 毛玻璃效果 */
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-/* 统一标题样式 */
-.about h2, .projects h2, .news h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-}
-
-/* 统一标题前的装饰 */
-.about h2::before, .projects h2::before, .news h2::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: #4285f4;
-    border-radius: 6px;
-    margin-right: 10px;
-}
-
-/* 项目部分样式 */
-.projects {
-    padding: 20px;
-    background: #f8faff;
-    margin: 20px;
-}
-
-.projects .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-    justify-content: flex-start;
-    width: 100%;  /* 确保容器占满宽度 */
-}
-
-.project {
-    background: rgba(255, 255, 255, 0.9);  /* 更不透明的白色背景 */
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    flex: 0 0 calc(25% - 15px);
-    min-width: 210px;
-    max-width: calc(25% - 15px);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    height: 294px;
-}
-
-.project-header {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-
-.project-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.project .project-header img {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
-    margin-bottom: 0;
-}
-
-.project-title-container {
-    flex: 1;
-}
-
-.project-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
-}
-
-.project h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 0;
-}
-
-.project .badge {
-    font-size: 12px;
-    color: #f5a623;
-    display: flex;
-    align-items: center;
-}
-
-.project .badge::before {
-    content: '🏆';
-    margin-right: 4px;
-}
-
-.project p {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.project .link-with-image {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #000;
-    color: #fff;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-top: auto;
-    width: fit-content;
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;  /* 去掉下划线 */
-}
-
-.project .link-with-image:hover {
-    text-decoration: none;
-    opacity: 0.9;
-}
-
-.hover-preview {
-    display: none;
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 999;
-    object-fit: contain;
-    background-color: white;
-    opacity: 1 !important;
-    transition: none;
-}
-
-/* 显示时的样式 */
-.link-with-image:hover .hover-preview,
-.link-with-image:focus .hover-preview,
-.link-with-image.active .hover-preview {
-    display: block;
-    opacity: 1 !important;
-    visibility: visible;
-}
-
-/* 添加点击激活的样式 */
-.link-with-image.active {
-    opacity: 1;
-}
-
-.hover-preview::after {
-    display: none;
-}
-
-/* 修改新闻文章样式 */
-.news article {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-    border: none;
-}
-
-.news article:last-child {
-    margin-bottom: 0;
-}
-
-/* 修改关于我部分样式 */
-.about .intro-container {
-    background: none;  /* 移除白色背景 */
-    padding: 0;       /* 移除内边距 */
-    box-shadow: none; /* 移除阴影 */
-}
-
-.about p {
-    margin-bottom: 10px;
-    line-height: 1.8;
-}
-
-.about p:last-child {
-    margin-bottom: 0;
-}
-
-/* 移除旧的样式 */
-.about {
-    box-shadow: none;
-}
-
-/* 移除之前的卡片样式 */
-.about p {
-    background: none;
-    border-radius: 0;
+    min-height: 100vh;
     padding: 0;
-    box-shadow: none;
 }
 
-.news article {
-    border-bottom: none;
-}
-
-/* 底部样式 */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: none;  /* 移除背景色 */
-    color: #333;  /* 改为黑色文字 */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* 链接样式 */
-footer a {
-    color: #333;  /* 链接也改为黑色 */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* 确保底部文字清晰可见 */
-footer p {
-    margin: 0;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* 媒体查询 */
-@media (max-width: 1200px) {
-    .project {
-        flex: 0 0 calc(33.33% - 14px);
-        max-width: calc(33.33% - 14px);
-    }
-}
-
-@media (max-width: 768px) {
-    .project {
-        flex: 0 0 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 480px) {
-    .project {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-/* 隐藏图片 */
-.hover-image {
-    display: none;
-}
-
+/* 语言切换按钮 */
 .language-switch {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 8px 16px;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .lang-btn {
@@ -312,15 +32,16 @@ footer p {
     cursor: pointer;
     color: #666;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .lang-btn.active {
-    color: #4285f4;
-    font-weight: bold;
+    color: #007AFF;
+    font-weight: 600;
 }
 
 .lang-btn:hover {
-    color: #4285f4;
+    color: #007AFF;
 }
 
 .language-switch span {
@@ -328,39 +49,267 @@ footer p {
     margin: 0 4px;
 }
 
-.link-with-note {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #ff2442;  /* 小红书的红色 */
-    color: #fff;
-    border-radius: 20px;
+/* 主容器 */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 应用网格区域 */
+.app-grid {
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.app-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 应用图标容器 */
+.app-icon-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 个人资料App特殊样式 */
+.profile-app .app-icon {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.profile-tooltip {
+    width: 350px;
+    padding: 24px;
+}
+
+.profile-tooltip h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.profile-subtitle {
+    font-size: 16px;
+    color: #86868b;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-details {
+    text-align: left;
+}
+
+.profile-details p {
     font-size: 14px;
-    margin-top: auto;
-    width: fit-content;
-    text-decoration: none;
-    transition: background-color 0.2s;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
-.link-with-note:hover {
-    background: #e61e37;  /* 稍深的红色用于悬停效果 */
+.profile-details p:last-child {
+    margin-bottom: 0;
 }
 
-/* 修改笔记部分的样式 */
-.news article h3 {
-    margin-bottom: 10px;
-}
-
-.news article h3 a {
-    color: #333;
-    text-decoration: none;
+/* 应用图标 */
+.app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
     cursor: pointer;
 }
 
-.news article h3 a:hover {
-    text-decoration: underline;
+.app-icon:hover {
+    transform: scale(1.1);
 }
 
-/* 隐藏原来的链接 */
-.news article > a {
-    display: none;
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 应用名称 */
+.app-icon-container::after {
+    content: attr(data-app-name);
+    font-size: 12px;
+    color: #1d1d1f;
+    text-align: center;
+    font-weight: 500;
+    max-width: 80px;
+    word-wrap: break-word;
+}
+
+/* 应用名称样式 */
+.app-name {
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    max-width: 80px;
+    word-wrap: break-word;
+    line-height: 1.2;
+    margin-top: 8px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 个人资料app名称特殊样式 */
+.profile-app .app-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* 应用提示框 */
+.app-tooltip {
+    position: absolute;
+    top: 100%;  /* 改为显示在下方 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    margin-top: 20px;  /* 改为上方间距 */
+}
+
+.app-tooltip::before {  /* 改为向上的箭头 */
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.95);
+}
+
+/* 悬停时显示提示框 */
+.app-icon-container:hover .app-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 提示框内容样式 */
+.app-tooltip h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.app-tooltip .app-category {
+    font-size: 12px;
+    color: #007AFF;
+    font-weight: 500;
+    background: rgba(0, 122, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0 auto 8px;
+    text-align: center;
+}
+
+.app-tooltip .app-description {
+    font-size: 13px;
+    color: #86868b;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* 按钮样式 */
+.app-button, .app-button-red {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.app-button {
+    background: #007AFF;
+    color: white;
+}
+
+.app-button:hover {
+    background: #0056CC;
+    transform: scale(1.02);
+}
+
+.app-button-red {
+    background: #FF3B30;
+    color: white;
+}
+
+.app-button-red:hover {
+    background: #D70015;
+    transform: scale(1.02);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+    }
+    
+    .app-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 30px;
+    }
+    
+    .app-tooltip {
+        width: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .profile-tooltip {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 20px;
+    }
+    
+    .app-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .app-tooltip {
+        width: 250px;
+    }
+    
+    .profile-tooltip {
+        width: 280px;
+    }
 }

@@ -1,0 +1,54 @@
+[
+{
+    "id": "snake",
+    "name": {
+      "zh": "极简贪吃蛇",
+      "en": "Minimalist Snake"
+    },
+    "icon": "images/snake.png",
+    "alt": "极简贪吃蛇",
+    "type": "app",
+    "category": {
+      "zh": "0按钮贪吃蛇游戏",
+      "en": "Zero-Button Snake Game"
+    },
+    "description": {
+      "zh": "没有按钮的贪吃蛇小游戏，让你专注于游戏本身，享受从未有过的贪吃蛇游戏的快乐。",
+      "en": "A buttonless snake game that lets you focus purely on the gameplay, enjoying an unprecedented snake game experience."
+    },
+    "button": {
+      "text": {
+        "zh": "看小红书介绍笔记",
+        "en": "View Intro on RedNote"
+      },
+      "link": "https://www.xiaohongshu.com/explore/67a0109e000000002602fa80",
+      "style": "red"
+    }
+  },
+  {
+    "id": "dice",
+    "name": {
+      "zh": "电子骰子",
+      "en": "Digital Dice"
+    },
+    "icon": "images/dice.png",
+    "alt": "电子骰子",
+    "type": "app",
+    "category": {
+      "zh": "聚会抽签游戏必备",
+      "en": "Essential for Party Games"
+    },
+    "description": {
+      "zh": "这是一个电子骰子，只要摇一摇手机，你就能像摇骰子一样得到一个点数。以后聚会玩游戏，再也不需要带骰子了！用电子骰子就可以。逼真的音效和振动效果，让你拥有和摇真骰子一样的体验。",
+      "en": "A digital dice that gives you a number with just a shake of your phone. No need to bring physical dice to parties anymore. With realistic sound effects and vibration feedback, it provides an authentic dice-rolling experience."
+    },
+    "button": {
+      "text": {
+        "zh": "看小红书介绍笔记",
+        "en": "View Intro on RedNote"
+      },
+      "link": "https://www.xiaohongshu.com/discovery/item/67aed86a0000000029033cc5",
+      "style": "red"
+    }
+  }
+]
