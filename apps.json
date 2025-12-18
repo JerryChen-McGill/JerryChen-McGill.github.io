@@ -131,11 +131,11 @@
     {
       "id": "quantitative-recommender",
       "name": {
-        "zh": "定量方法推荐器",
-        "en": "Quantitative Method Recommender"
+        "zh": "定量研究方法库",
+        "en": "Quantitative Method Hub"
       },
       "icon": "images/Quantitative-Method-Recommender.png",
-      "alt": "Quantitative Method Recommender",
+      "alt": "Quantitative Method Hub",
       "type": "app",
       "category": {
         "zh": "📊 交互式定量方法推荐工具",
@@ -203,6 +203,32 @@
           "en": "Visit Demo"
         },
         "link": "https://jerrychen-mcgill.github.io/minimalist-neural-network-visualization/",
+        "style": "blue"
+      }
+    },
+    {
+      "id": "pinecone-game",
+      "name": {
+        "zh": "松果游戏",
+        "en": "Pinecone Game"
+      },
+      "icon": "images/pinecone-game.png",
+      "alt": "Pinecone Game",
+      "type": "app",
+      "category": {
+        "zh": "🎮 基于Nim理论的策略游戏",
+        "en": "🎮 Strategy Game Based on Nim Theory"
+      },
+      "description": {
+        "zh": "一个基于Nim游戏理论的策略游戏，你和可爱的松鼠Jay一起玩松果收集游戏！6个松果排成一排，你和Jay轮流拿1个或2个相邻的松果，拿走最后一个松果的玩家获胜。可以选择先手或后手，Jay使用智能镜像对称策略，极具挑战性！",
+        "en": "A strategy game based on Nim game theory where you play a pinecone collection game with adorable squirrel Jay! 6 pinecones are arranged in a row. You and Jay take turns picking 1 or 2 adjacent pinecones. The player who takes the last pinecone wins! Choose to go first or second. Jay uses intelligent mirror symmetry strategy - highly challenging!"
+      },
+      "button": {
+        "text": {
+          "zh": "开始游戏",
+          "en": "Play Game"
+        },
+        "link": "https://jerrychen-mcgill.github.io/Pinecone-Game/",
         "style": "blue"
       }
     }
