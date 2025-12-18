@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,23 @@
     <script src="apps.js" defer></script>
 </head>
 <body>
-    <!-- 语言切换按钮 -->
-    <div class="language-switch">
-        <button class="lang-btn active" data-lang="zh">中文</button>
-        <span>|</span>
-        <button class="lang-btn" data-lang="en">EN</button>
+    <!-- 语言切换菜单 -->
+    <div class="language-menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Language menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-dropdown" id="menuDropdown">
+            <button class="lang-option" data-lang="en">
+                <span class="lang-label">English</span>
+                <span class="lang-code">EN</span>
+            </button>
+            <button class="lang-option" data-lang="zh">
+                <span class="lang-label">中文</span>
+                <span class="lang-code">中文</span>
+            </button>
+        </div>
     </div>
 
     <!-- 主容器 -->

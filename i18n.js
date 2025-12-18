@@ -12,7 +12,7 @@ const translations = {
 
 // 初始化语言
 function initLanguage() {
-    const savedLang = localStorage.getItem('preferred-language') || 'zh';
+    const savedLang = localStorage.getItem('preferred-language') || 'en';
     setLanguage(savedLang);
 }
 
@@ -22,7 +22,7 @@ function setLanguage(lang) {
     localStorage.setItem('preferred-language', lang);
     
     // 更新按钮状态
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    document.querySelectorAll('.lang-option').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
     
@@ -39,9 +39,32 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
     
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    // 菜单切换
+    const menuToggle = document.getElementById('menuToggle');
+    const menuDropdown = document.getElementById('menuDropdown');
+    
+    if (menuToggle && menuDropdown) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuDropdown.classList.toggle('show');
+        });
+        
+        // 点击外部关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+                menuDropdown.classList.remove('show');
+            }
+        });
+    }
+    
+    // 语言选择
+    document.querySelectorAll('.lang-option').forEach(btn => {
         btn.addEventListener('click', () => {
             setLanguage(btn.dataset.lang);
+            const menuDropdown = document.getElementById('menuDropdown');
+            if (menuDropdown) {
+                menuDropdown.classList.remove('show');
+            }
         });
     });
 }); 
