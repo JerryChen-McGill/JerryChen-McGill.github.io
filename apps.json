@@ -55,8 +55,8 @@
       "alt": "哆啦出题小助手",
       "type": "app",
       "category": {
-        "zh": "应用付费榜 Top1",
-        "en": "No.1 in Paid Apps"
+        "zh": "数学教学学习必备",
+        "en": "Essential for Math Teaching & Learning"
       },
       "description": {
         "zh": "轻松帮你出数学题目，支持多种题型，智能生成个性化练习题。",
@@ -78,8 +78,8 @@
       "alt": "喵喵彩纸",
       "type": "app",
       "category": {
-        "zh": "3天登上分类榜 Top20",
-        "en": "Top 20 in Category within 3 Days"
+        "zh": "纯色彩纸DIY",
+        "en": "Solid Color Paper DIY"
       },
       "description": {
         "zh": "简易易用的彩纸，支持360度全色调节，满足各种场景需求。",
@@ -101,8 +101,8 @@
       "alt": "小诗机",
       "type": "app",
       "category": {
-        "zh": "春节期间爆火的小程序",
-        "en": "Viral Mini Program during Spring Festival"
+        "zh": "吟诗作对如此简单",
+        "en": "Poetry Made Easy"
       },
       "description": {
         "zh": "只要输入你的名字，你就能在几秒钟之内得到一首藏头诗。非常适合用来给他人送有中国文化底蕴的祝福。",
@@ -244,8 +244,8 @@
       "alt": "Pinecone Game",
       "type": "app",
       "category": {
-        "zh": "🎮 策略游戏",
-        "en": "🎮 Strategy Game"
+        "zh": "🎮策略益智游戏",
+        "en": "🎮 Strategy Puzzle Game"
       },
       "description": {
         "zh": "一个基于Nim游戏理论的策略游戏，你和可爱的松鼠Jay一起玩松果收集游戏！6个松果排成一排，你和Jay轮流拿1个或2个相邻的松果，拿走最后一个松果的玩家获胜。可以选择先手或后手，Jay使用智能镜像对称策略，极具挑战性！",
