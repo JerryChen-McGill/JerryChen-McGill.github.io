@@ -56,24 +56,36 @@ class AppManager {
         });
     }
 
+    shouldHideCategory(title) {
+        // 如果标题长度超过18个字符（中英文混合），或者标题包含换行符，隐藏标签
+        return title.length > 18 || title.includes('\n') || title.split(' ').length > 2;
+    }
+
     renderProfileApp(container) {
         const profile = this.appsData.profile;
+        
         const profileHtml = `
             <div class="app-icon-container profile-app" data-app-id="profile">
                 <div class="app-icon profile-icon clickable-app-icon" data-type="profile" data-qr="images/redNote.jpg" data-email="chenshuaichina@outlook.com">
                     <img src="${profile.icon}" alt="${profile.alt}" class="avatar-img">
                 </div>
-                <div class="app-name">${profile.name[this.currentLang]}</div>
+                <div class="app-name">${profile.shortName ? profile.shortName[this.currentLang] : profile.name[this.currentLang]}</div>
                 <div class="app-tooltip profile-tooltip" style="display: none;">
                     <button class="tooltip-close"></button>
                     <div class="app-info-card">
-                        <h3>${profile.name[this.currentLang]}</h3>
-                        <p class="profile-subtitle">${profile.subtitle[this.currentLang]}</p>
-                        <div class="profile-details">
-                            ${profile.details[this.currentLang].map(detail => `<p>${detail}</p>`).join('')}
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <img src="${profile.icon}" alt="${profile.alt}">
+                            </div>
+                            <div class="header-content">
+                                <h3 class="card-title" data-title="${profile.name[this.currentLang]}">${profile.name[this.currentLang]}</h3>
+                            </div>
                         </div>
-                        <img src="images/redNote.jpg" alt="${this.currentLang === 'zh' ? '小红书二维码' : 'RedNote QR Code'}" class="qr-code-image">
-                        <p class="qr-instruction">${this.currentLang === 'zh' ? '扫描二维码关注小红书' : 'Scan QR code to follow RedNote'}</p>
+                        <p class="app-description">${profile.description[this.currentLang]}</p>
+                        <div class="qr-code-wrapper">
+                            <img src="images/redNote.jpg" alt="${this.currentLang === 'zh' ? '小红书二维码' : 'RedNote QR Code'}" class="qr-code-image">
+                            <p class="qr-instruction">${this.currentLang === 'zh' ? '保存二维码并在微信中扫码使用' : 'Save QR code and scan in WeChat to use'}</p>
+                        </div>
                         <div class="email-section">
                             <p class="email-label">${this.currentLang === 'zh' ? '邮箱联系方式：' : 'Email:'}</p>
                             <p class="email-address">chenshuaichina@outlook.com</p>
@@ -88,6 +100,15 @@ class AppManager {
     renderAppCard(container, app) {
         let appHtml = '';
         
+        // 生成特征标签（如果有features就用）
+        let featuresHtml = '';
+        if (app.features && app.features.length > 0) {
+            const features = app.features.slice(0, 3); // 最多显示3个
+            featuresHtml = features.map(feature => 
+                `<div class="feature-item"><span>${feature[this.currentLang] || feature}</span></div>`
+            ).join('');
+        }
+        
         if (app.qrCode) {
             // 有二维码的app，点击显示信息和二维码整合的信息卡
             appHtml = `
@@ -95,15 +116,25 @@ class AppManager {
                     <div class="app-icon clickable-app-icon" data-type="qr" data-qr="${app.qrCode}">
                         <img src="${app.icon}" alt="${app.alt}">
                     </div>
-                    <div class="app-name">${app.name[this.currentLang]}</div>
+                    <div class="app-name">${app.shortName ? app.shortName[this.currentLang] : app.name[this.currentLang]}</div>
                     <div class="app-tooltip" style="display: none;">
                         <button class="tooltip-close"></button>
                         <div class="app-info-card">
-                            <h3>${app.name[this.currentLang]}</h3>
-                            <p class="app-category">${app.category[this.currentLang]}</p>
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <img src="${app.icon}" alt="${app.alt}">
+                                </div>
+                                <div class="header-content">
+                                    <h3 class="card-title" data-title="${app.name[this.currentLang]}">${app.name[this.currentLang]}</h3>
+                                    <p class="app-category ${this.shouldHideCategory(app.name[this.currentLang]) ? 'hide-category' : ''}">${app.category[this.currentLang]}</p>
+                                </div>
+                            </div>
                             <p class="app-description">${app.description[this.currentLang]}</p>
-                            <img src="${app.qrCode}" alt="小程序二维码" class="qr-code-image">
-                            <p class="qr-instruction">扫描二维码使用小程序</p>
+                            <div class="features-list">${featuresHtml}</div>
+                            <div class="qr-code-wrapper">
+                                <img src="${app.qrCode}" alt="${this.currentLang === 'zh' ? '小程序二维码' : 'Mini Program QR Code'}" class="qr-code-image">
+                                <p class="qr-instruction">${this.currentLang === 'zh' ? '保存二维码并在微信中扫码使用' : 'Save QR code and scan in WeChat to use'}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -115,12 +146,20 @@ class AppManager {
                     <div class="app-icon clickable-app-icon" data-type="link" data-link="${app.button.link}">
                         <img src="${app.icon}" alt="${app.alt}">
                     </div>
-                    <div class="app-name">${app.name[this.currentLang]}</div>
+                    <div class="app-name">${app.shortName ? app.shortName[this.currentLang] : app.name[this.currentLang]}</div>
                     <div class="app-tooltip" style="display: none;">
                         <button class="tooltip-close"></button>
-                        <h3>${app.name[this.currentLang]}</h3>
-                        <p class="app-category">${app.category[this.currentLang]}</p>
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <img src="${app.icon}" alt="${app.alt}">
+                            </div>
+                            <div class="header-content">
+                                <h3 class="card-title" data-title="${app.name[this.currentLang]}">${app.name[this.currentLang]}</h3>
+                                <p class="app-category ${this.shouldHideCategory(app.name[this.currentLang]) ? 'hide-category' : ''}">${app.category[this.currentLang]}</p>
+                            </div>
+                        </div>
                         <p class="app-description">${app.description[this.currentLang]}</p>
+                        <div class="features-list">${featuresHtml}</div>
                         <a href="${app.button.link}" target="_blank" class="app-button">${app.button.text ? app.button.text[this.currentLang] : (this.currentLang === 'zh' ? '访问网站' : 'Visit Website')}</a>
                     </div>
                 </div>
@@ -187,7 +226,7 @@ class AppManager {
                     // 如果已经显示，则关闭；否则显示
                     if (tooltip.classList.contains('show')) {
                         this.hideInfoCard();
-                    } else {
+                } else {
                         // 直接显示，不需要延迟
                         this.showInfoCard(tooltip);
                     }
@@ -290,10 +329,10 @@ class AppManager {
                     <span class="qr-close">&times;</span>
                 </div>
                 <div class="qr-modal-body">
-                    <img src="${qrCodePath}" alt="小红书二维码" class="qr-code-image">
-                    <p class="qr-instruction">扫描二维码关注小红书</p>
+                    <img src="${qrCodePath}" alt="${this.currentLang === 'zh' ? '小红书二维码' : 'RedNote QR Code'}" class="qr-code-image">
+                    <p class="qr-instruction">${this.currentLang === 'zh' ? '扫描二维码关注小红书' : 'Scan QR code to follow RedNote'}</p>
                     <div class="email-section">
-                        <p class="email-label">邮箱联系方式：</p>
+                        <p class="email-label">${this.currentLang === 'zh' ? '邮箱联系方式：' : 'Email:'}</p>
                         <p class="email-address">${email}</p>
                     </div>
                 </div>
@@ -331,8 +370,8 @@ class AppManager {
                     <span class="qr-close">&times;</span>
                 </div>
                 <div class="qr-modal-body">
-                    <img src="${qrCodePath}" alt="小程序二维码" class="qr-code-image">
-                    <p class="qr-instruction">扫描二维码使用小程序</p>
+                    <img src="${qrCodePath}" alt="${this.currentLang === 'zh' ? '小程序二维码' : 'Mini Program QR Code'}" class="qr-code-image">
+                    <p class="qr-instruction">${this.currentLang === 'zh' ? '扫描二维码使用小程序' : 'Scan QR code to use Mini Program'}</p>
                 </div>
             </div>
         `;

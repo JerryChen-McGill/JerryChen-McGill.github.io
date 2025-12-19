@@ -5,30 +5,26 @@
       "zh": "Jerry Chen",
       "en": "Jerry Chen"
     },
+    "shortName": {
+      "zh": "Jerry Chen",
+      "en": "Jerry Chen"
+    },
     "icon": "images/jerry.jpg",
     "alt": "Jerry Chen",
     "type": "profile",
-    "subtitle": {
-      "zh": "AI Coder | 不会写代码的博士生不是好AI独立开发",
-      "en": "AI Potential Explorer | Ph.D. Student in Learning Sciences | Independent Developer"
-    },
-    "details": {
-      "zh": [
-        "100+粉丝博主，小红书账号：智学计划",
-        "AI课程开发师",
-        "独立开发者，已开发多款AI产品"
-      ],
-      "en": [
-        "100+ Followers, RedNote Account: 智学计划",
-        "AI Course Developer",
-        "Independent Developer, Created Multiple AI Products"
-      ]
+    "description": {
+      "zh": "我是一个持续学习的独立开发者，我热衷于实用且美观的产品。我也是热衷于Vibe Coding的开发者，尝试结合AI的能力和人的审美，做出令用户赞叹的产品。",
+      "en": "I am a continuously learning independent developer, passionate about practical and beautiful products. I am also a developer passionate about Vibe Coding, trying to combine AI capabilities with human aesthetics to create products that amaze users."
     }
   },
   "apps": [
     {
       "id": "digital-card",
       "name": {
+        "zh": "名片君Pro",
+        "en": "Digital Card Pro"
+      },
+      "shortName": {
         "zh": "名片君Pro",
         "en": "Digital Card Pro"
       },
@@ -51,6 +47,10 @@
         "zh": "哆啦出题小助手",
         "en": "Dora Math Assistant"
       },
+      "shortName": {
+        "zh": "出题小助手",
+        "en": "Math Assistant"
+      },
       "icon": "images/dora.png",
       "alt": "哆啦出题小助手",
       "type": "app",
@@ -69,6 +69,10 @@
       "name": {
         "zh": "喵喵彩纸",
         "en": "MiaoMiao Color Paper"
+      },
+      "shortName": {
+        "zh": "喵喵彩纸",
+        "en": "Color Paper"
       },
       "icon": "images/color-paper.jpg",
       "alt": "喵喵彩纸",
@@ -89,6 +93,10 @@
         "zh": "小诗机",
         "en": "Mini Poem Machine"
       },
+      "shortName": {
+        "zh": "小诗机",
+        "en": "Poem Machine"
+      },
       "icon": "images/poem.jpg",
       "alt": "小诗机",
       "type": "app",
@@ -107,6 +115,10 @@
       "name": {
         "zh": "AI小程序开发教程",
         "en": "AI Mini Program Development Tutorial"
+      },
+      "shortName": {
+        "zh": "小程序教程",
+        "en": "Mini Program Tutorial"
       },
       "icon": "images/AIMiniprogram.JPG",
       "alt": "AI小程序开发教程",
@@ -134,6 +146,10 @@
         "zh": "定量研究方法库",
         "en": "Quantitative Method Hub"
       },
+      "shortName": {
+        "zh": "定量方法库",
+        "en": "QuanHub"
+      },
       "icon": "images/Quantitative-Method-Recommender.png",
       "alt": "Quantitative Method Hub",
       "type": "app",
@@ -159,6 +175,10 @@
       "name": {
         "zh": "手写数字识别",
         "en": "Hand-written Digit Recognition"
+      },
+      "shortName": {
+        "zh": "数字识别",
+        "en": "Digit Recognition"
       },
       "icon": "images/digit-recognition.png",
       "alt": "手写数字识别",
@@ -186,6 +206,10 @@
         "zh": "神经网络可视化",
         "en": "Neural Network Visualization"
       },
+      "shortName": {
+        "zh": "神经网络",
+        "en": "Neural Network"
+      },
       "icon": "images/Neural Net Visualization.png",
       "alt": "Neural Network Visualization",
       "type": "app",
@@ -212,12 +236,16 @@
         "zh": "松果游戏",
         "en": "Pinecone Game"
       },
+      "shortName": {
+        "zh": "松果游戏",
+        "en": "Pinecone Game"
+      },
       "icon": "images/pinecone-game.png",
       "alt": "Pinecone Game",
       "type": "app",
       "category": {
-        "zh": "🎮 基于Nim理论的策略游戏",
-        "en": "🎮 Strategy Game Based on Nim Theory"
+        "zh": "🎮 策略游戏",
+        "en": "🎮 Strategy Game"
       },
       "description": {
         "zh": "一个基于Nim游戏理论的策略游戏，你和可爱的松鼠Jay一起玩松果收集游戏！6个松果排成一排，你和Jay轮流拿1个或2个相邻的松果，拿走最后一个松果的玩家获胜。可以选择先手或后手，Jay使用智能镜像对称策略，极具挑战性！",
