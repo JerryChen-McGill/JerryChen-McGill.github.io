@@ -392,7 +392,6 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 4px; /* 让标题和标签稍微下移 */
 }
 
 .app-info-card .qr-code-wrapper {

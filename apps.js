@@ -62,7 +62,7 @@ class AppManager {
         const isEnglish = title.includes(' ') && (chineseCharCount / title.length) < 0.3;
         
         //超过20个字符隐藏标签
-        const maxLength = 20;
+        const maxLength = 18;
         
         // 如果标题长度超过限制，或者标题包含换行符，隐藏标签
         return title.length > maxLength || title.includes('\n');
