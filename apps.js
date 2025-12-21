@@ -57,8 +57,15 @@ class AppManager {
     }
 
     shouldHideCategory(title) {
-        // 如果标题长度超过18个字符（中英文混合），或者标题包含换行符，隐藏标签
-        return title.length > 18 || title.includes('\n') || title.split(' ').length > 2;
+        // 检测是否为英文（简单判断：如果包含空格且中文字符少于30%，认为是英文）
+        const chineseCharCount = (title.match(/[\u4e00-\u9fa5]/g) || []).length;
+        const isEnglish = title.includes(' ') && (chineseCharCount / title.length) < 0.3;
+        
+        //超过20个字符隐藏标签
+        const maxLength = 20;
+        
+        // 如果标题长度超过限制，或者标题包含换行符，隐藏标签
+        return title.length > maxLength || title.includes('\n');
     }
 
     renderProfileApp(container) {
@@ -113,8 +120,9 @@ class AppManager {
             // 有二维码的app，点击显示信息和二维码整合的信息卡
             appHtml = `
                 <div class="app-icon-container" data-app-id="${app.id}">
-                    <div class="app-icon clickable-app-icon" data-type="qr" data-qr="${app.qrCode}">
+                    <div class="app-icon clickable-app-icon miniprogram-icon" data-type="qr" data-qr="${app.qrCode}">
                         <img src="${app.icon}" alt="${app.alt}">
+                        <span class="miniprogram-badge"></span>
                     </div>
                     <div class="app-name">${app.shortName ? app.shortName[this.currentLang] : app.name[this.currentLang]}</div>
                     <div class="app-tooltip" style="display: none;">
@@ -129,7 +137,7 @@ class AppManager {
                                     <p class="app-category ${this.shouldHideCategory(app.name[this.currentLang]) ? 'hide-category' : ''}">${app.category[this.currentLang]}</p>
                                 </div>
                             </div>
-                            <p class="app-description">${app.description[this.currentLang]}</p>
+                        <p class="app-description">${app.description[this.currentLang]}</p>
                             <div class="features-list">${featuresHtml}</div>
                             <div class="qr-code-wrapper">
                                 <img src="${app.qrCode}" alt="${this.currentLang === 'zh' ? '小程序二维码' : 'Mini Program QR Code'}" class="qr-code-image">
@@ -151,7 +159,7 @@ class AppManager {
                         <button class="tooltip-close"></button>
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="${app.icon}" alt="${app.alt}">
+                            <img src="${app.icon}" alt="${app.alt}">
                             </div>
                             <div class="header-content">
                                 <h3 class="card-title" data-title="${app.name[this.currentLang]}">${app.name[this.currentLang]}</h3>

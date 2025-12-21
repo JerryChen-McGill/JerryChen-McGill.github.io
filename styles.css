@@ -177,7 +177,7 @@ body::before {
 @media (min-width: 769px) {
     .app-container {
         max-width: 1200px;
-        padding: 20px;
+    padding: 20px;
     }
 }
 
@@ -211,6 +211,14 @@ body::before {
     
     .app-icon-container {
         max-width: 120px;
+    }
+    
+    .miniprogram-badge {
+        width: 18px;
+        height: 18px;
+        bottom: 3px;
+        right: 3px;
+        border-width: 2px;
     }
 }
 
@@ -256,12 +264,27 @@ body::before {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     flex-shrink: 0;
+    position: relative;
 }
 
 .app-icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* 小程序角标 */
+.miniprogram-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    background: #07c160;
+    border-radius: 50%;
+    border: 1.5px solid #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* 应用名称 */
@@ -652,6 +675,13 @@ body::before {
         border-radius: 15px;
     }
     
+    .miniprogram-badge {
+        width: 16px;
+        height: 16px;
+        bottom: 2px;
+        right: 2px;
+    }
+    
     .app-name {
         font-size: 13px;
         font-weight: 600;
@@ -747,6 +777,14 @@ body::before {
         width: 63.25px;
         height: 63.25px;
         border-radius: 14px;
+    }
+    
+    .miniprogram-badge {
+        width: 14px;
+        height: 14px;
+        bottom: 2px;
+        right: 2px;
+        border-width: 1.5px;
     }
     
     .app-name {

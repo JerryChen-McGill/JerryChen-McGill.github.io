@@ -19,6 +19,186 @@
   },
   "apps": [
     {
+      "id": "math-problem-generator",
+      "name": {
+        "zh": "数学出题大师",
+        "en": "Math Problem Generator"
+      },
+      "shortName": {
+        "zh": "数学出题大师",
+        "en": "Math Problem Gen"
+      },
+      "icon": "images/math problem gen.jpg",
+      "alt": "数学出题大师",
+      "type": "app",
+      "category": {
+        "zh": "🤖 AI智能数学学习",
+        "en": "🤖 AI-Powered Math Learning"
+      },
+      "description": {
+        "zh": "一款基于人工智能的数学题目生成器，可根据您的兴趣和偏好生成个性化数学题目。适合学生自主学习和数学老师教学使用。支持个性化题目生成、详细分步解答、题目收藏管理和提示设置保存等功能，让数学学习更有趣、更高效。",
+        "en": "An AI-powered math problem generator that creates personalized math problems based on your interests and preferences. Perfect for both students' self-learning and math teachers' classroom use. Features include customized problem generation, detailed step-by-step solutions, problem collection management, and saved prompt settings to make math learning more engaging and efficient."
+      },
+      "button": {
+        "text": {
+          "zh": "访问工具",
+          "en": "Visit Tool"
+        },
+        "link": "https://genai-oac9.onrender.com/",
+        "style": "blue"
+      }
+    },
+    {
+      "id": "quantitative-recommender",
+      "name": {
+        "zh": "定量研究方法库",
+        "en": "Quantitative Method Hub"
+      },
+      "shortName": {
+        "zh": "定量方法库",
+        "en": "QuanHub"
+      },
+      "icon": "images/Quantitative-Method-Recommender.png",
+      "alt": "Quantitative Method Hub",
+      "type": "app",
+      "category": {
+        "zh": "📊 交互式定量方法推荐工具",
+        "en": "📊 Interactive Quantitative Method Recommender"
+      },
+      "description": {
+        "zh": "一款简洁的网页应用，通过交互式决策树，根据您的数据类型和研究目标，推荐最合适的统计分析方法。支持连续、分类或混合数据，并清晰高亮最终推荐。",
+        "en": "An interactive tool that helps users select the appropriate statistical method for their research data and questions. This simple web application guides you through a decision tree to recommend the most suitable statistical analysis method based on your data type and research objectives."
+      },
+      "button": {
+        "text": {
+          "zh": "访问工具",
+          "en": "Visit Tool"
+        },
+        "link": "https://jerrychen-mcgill.github.io/Quantitative-Method-Recommender/",
+        "style": "blue"
+      }
+    },
+    {
+      "id": "pinecone-game",
+      "name": {
+        "zh": "松果游戏",
+        "en": "Pinecone Game"
+      },
+      "shortName": {
+        "zh": "松果游戏",
+        "en": "Pinecone Game"
+      },
+      "icon": "images/pinecone-game.png",
+      "alt": "Pinecone Game",
+      "type": "app",
+      "category": {
+        "zh": "🎮策略益智游戏",
+        "en": "🎮 Strategy Puzzle Game"
+      },
+      "description": {
+        "zh": "一个基于Nim游戏理论的策略游戏，你和可爱的松鼠Jay一起玩松果收集游戏！6个松果排成一排，你和Jay轮流拿1个或2个相邻的松果，拿走最后一个松果的玩家获胜。可以选择先手或后手，Jay使用智能镜像对称策略，极具挑战性！",
+        "en": "A strategy game based on Nim game theory where you play a pinecone collection game with adorable squirrel Jay! 6 pinecones are arranged in a row. You and Jay take turns picking 1 or 2 adjacent pinecones. The player who takes the last pinecone wins! Choose to go first or second. Jay uses intelligent mirror symmetry strategy - highly challenging!"
+      },
+      "button": {
+        "text": {
+          "zh": "开始游戏",
+          "en": "Play Game"
+        },
+        "link": "https://jerrychen-mcgill.github.io/Pinecone-Game/",
+        "style": "blue"
+      }
+    },
+    {
+      "id": "digit-recognition",
+      "name": {
+        "zh": "手写数字识别",
+        "en": "Hand-written Digit Recognition"
+      },
+      "shortName": {
+        "zh": "数字识别",
+        "en": "Digit Recognition"
+      },
+      "icon": "images/digit-recognition.png",
+      "alt": "手写数字识别",
+      "type": "app",
+      "category": {
+        "zh": "✍️ 智能识别手写数字",
+        "en": "✍️ Smart Hand-written Digit Recognition"
+      },
+      "description": {
+        "zh": "一个基于网页的手写数字识别应用，让您体验AI识别的乐趣。",
+        "en": "A web application for hand-written digit recognition, allowing you to experience the fun of AI recognition."
+      },
+      "button": {
+        "text": {
+          "zh": "访问工具",
+          "en": "Visit Tool"
+        },
+        "link": "https://digit-recognition-app-3bf2.onrender.com/",
+        "style": "blue"
+      }
+    },
+    {
+      "id": "neural-net-visualization",
+      "name": {
+        "zh": "神经网络可视化",
+        "en": "Neural Network Visualization"
+      },
+      "shortName": {
+        "zh": "神经网络",
+        "en": "Neural Network"
+      },
+      "icon": "images/Neural Net Visualization.png",
+      "alt": "Neural Network Visualization",
+      "type": "app",
+      "category": {
+        "zh": "交互式神经网络演示",
+        "en": "Interactive Neural Network Demo"
+      },
+      "description": {
+        "zh": "一个交互式网页应用，演示神经网络如何分类数字和汉字。",
+        "en": "An interactive web application that demonstrates neural network classification."
+      },
+      "button": {
+        "text": {
+          "zh": "访问演示",
+          "en": "Visit Demo"
+        },
+        "link": "https://jerrychen-mcgill.github.io/minimalist-neural-network-visualization/",
+        "style": "blue"
+      }
+    },
+    {
+      "id": "ai-tutorial",
+      "name": {
+        "zh": "AI小程序开发教程",
+        "en": "AI Mini Program Development Tutorial"
+      },
+      "shortName": {
+        "zh": "小程序教程",
+        "en": "Mini Program Tutorial"
+      },
+      "icon": "images/AIMiniprogram.JPG",
+      "alt": "AI小程序开发教程",
+      "type": "app",
+      "category": {
+        "zh": "📚 零基础友好的AI驱动开发教程",
+        "en": "📚 Beginner-friendly AI-driven Development Tutorial"
+      },
+      "description": {
+        "zh": "这是一个面向初学者的微信小程序开发教程，结合AI辅助开发工具，让您快速入门小程序开发。特点包括零基础友好、AI驱动开发、实战导向、循序渐进的学习路径。从环境搭建到项目发布，涵盖完整开发流程。",
+        "en": "A WeChat Mini Program development tutorial for beginners, combining AI-assisted development tools to help you quickly get started with Mini Program development. Features include beginner-friendly approach, AI-driven development, practical orientation, and progressive learning path. Covers the complete development process from environment setup to project release."
+      },
+      "button": {
+        "text": {
+          "zh": "开始学习",
+          "en": "Start Learning"
+        },
+        "link": "https://jerrychen-mcgill.github.io/AI-MiniProgram-Develop/",
+        "style": "blue"
+      }
+    },
+    {
       "id": "digital-card",
       "name": {
         "zh": "名片君Pro",
@@ -109,156 +289,6 @@
         "en": "Enter your name and get an acrostic poem in seconds. Perfect for sending culturally rich Chinese blessings to others."
       },
      "qrCode": "images/poem-qr.jpg"
-    },
-    {
-      "id": "ai-tutorial",
-      "name": {
-        "zh": "AI小程序开发教程",
-        "en": "AI Mini Program Development Tutorial"
-      },
-      "shortName": {
-        "zh": "小程序教程",
-        "en": "Mini Program Tutorial"
-      },
-      "icon": "images/AIMiniprogram.JPG",
-      "alt": "AI小程序开发教程",
-      "type": "app",
-      "category": {
-        "zh": "📚 零基础友好的AI驱动开发教程",
-        "en": "📚 Beginner-friendly AI-driven Development Tutorial"
-      },
-      "description": {
-        "zh": "这是一个面向初学者的微信小程序开发教程，结合AI辅助开发工具，让您快速入门小程序开发。特点包括零基础友好、AI驱动开发、实战导向、循序渐进的学习路径。从环境搭建到项目发布，涵盖完整开发流程。",
-        "en": "A WeChat Mini Program development tutorial for beginners, combining AI-assisted development tools to help you quickly get started with Mini Program development. Features include beginner-friendly approach, AI-driven development, practical orientation, and progressive learning path. Covers the complete development process from environment setup to project release."
-      },
-      "button": {
-        "text": {
-          "zh": "开始学习",
-          "en": "Start Learning"
-        },
-        "link": "https://jerrychen-mcgill.github.io/AI-MiniProgram-Develop/",
-        "style": "blue"
-      }
-    },
-    {
-      "id": "quantitative-recommender",
-      "name": {
-        "zh": "定量研究方法库",
-        "en": "Quantitative Method Hub"
-      },
-      "shortName": {
-        "zh": "定量方法库",
-        "en": "QuanHub"
-      },
-      "icon": "images/Quantitative-Method-Recommender.png",
-      "alt": "Quantitative Method Hub",
-      "type": "app",
-      "category": {
-        "zh": "📊 交互式定量方法推荐工具",
-        "en": "📊 Interactive Quantitative Method Recommender"
-      },
-      "description": {
-        "zh": "一款简洁的网页应用，通过交互式决策树，根据您的数据类型和研究目标，推荐最合适的统计分析方法。支持连续、分类或混合数据，并清晰高亮最终推荐。",
-        "en": "An interactive tool that helps users select the appropriate statistical method for their research data and questions. This simple web application guides you through a decision tree to recommend the most suitable statistical analysis method based on your data type and research objectives."
-      },
-      "button": {
-        "text": {
-          "zh": "访问工具",
-          "en": "Visit Tool"
-        },
-        "link": "https://jerrychen-mcgill.github.io/Quantitative-Method-Recommender/",
-        "style": "blue"
-      }
-    },
-    {
-      "id": "digit-recognition",
-      "name": {
-        "zh": "手写数字识别",
-        "en": "Hand-written Digit Recognition"
-      },
-      "shortName": {
-        "zh": "数字识别",
-        "en": "Digit Recognition"
-      },
-      "icon": "images/digit-recognition.png",
-      "alt": "手写数字识别",
-      "type": "app",
-      "category": {
-        "zh": "✍️ 智能识别手写数字",
-        "en": "✍️ Smart Hand-written Digit Recognition"
-      },
-      "description": {
-        "zh": "一个基于网页的手写数字识别应用，让您体验AI识别的乐趣。",
-        "en": "A web application for hand-written digit recognition, allowing you to experience the fun of AI recognition."
-      },
-      "button": {
-        "text": {
-          "zh": "访问工具",
-          "en": "Visit Tool"
-        },
-        "link": "https://digit-recognition-app-3bf2.onrender.com/",
-        "style": "blue"
-      }
-    },
-    {
-      "id": "neural-net-visualization",
-      "name": {
-        "zh": "神经网络可视化",
-        "en": "Neural Network Visualization"
-      },
-      "shortName": {
-        "zh": "神经网络",
-        "en": "Neural Network"
-      },
-      "icon": "images/Neural Net Visualization.png",
-      "alt": "Neural Network Visualization",
-      "type": "app",
-      "category": {
-        "zh": "交互式神经网络演示",
-        "en": "Interactive Neural Network Demo"
-      },
-      "description": {
-        "zh": "一个交互式网页应用，演示神经网络如何分类数字和汉字。",
-        "en": "An interactive web application that demonstrates neural network classification."
-      },
-      "button": {
-        "text": {
-          "zh": "访问演示",
-          "en": "Visit Demo"
-        },
-        "link": "https://jerrychen-mcgill.github.io/minimalist-neural-network-visualization/",
-        "style": "blue"
-      }
-    },
-    {
-      "id": "pinecone-game",
-      "name": {
-        "zh": "松果游戏",
-        "en": "Pinecone Game"
-      },
-      "shortName": {
-        "zh": "松果游戏",
-        "en": "Pinecone Game"
-      },
-      "icon": "images/pinecone-game.png",
-      "alt": "Pinecone Game",
-      "type": "app",
-      "category": {
-        "zh": "🎮策略益智游戏",
-        "en": "🎮 Strategy Puzzle Game"
-      },
-      "description": {
-        "zh": "一个基于Nim游戏理论的策略游戏，你和可爱的松鼠Jay一起玩松果收集游戏！6个松果排成一排，你和Jay轮流拿1个或2个相邻的松果，拿走最后一个松果的玩家获胜。可以选择先手或后手，Jay使用智能镜像对称策略，极具挑战性！",
-        "en": "A strategy game based on Nim game theory where you play a pinecone collection game with adorable squirrel Jay! 6 pinecones are arranged in a row. You and Jay take turns picking 1 or 2 adjacent pinecones. The player who takes the last pinecone wins! Choose to go first or second. Jay uses intelligent mirror symmetry strategy - highly challenging!"
-      },
-      "button": {
-        "text": {
-          "zh": "开始游戏",
-          "en": "Play Game"
-        },
-        "link": "https://jerrychen-mcgill.github.io/Pinecone-Game/",
-        "style": "blue"
-      }
     }
     
   ]
