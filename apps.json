@@ -289,6 +289,36 @@
         "en": "Enter your name and get an acrostic poem in seconds. Perfect for sending culturally rich Chinese blessings to others."
       },
      "qrCode": "images/poem-qr.jpg"
+    },
+    {
+      "id": "moment-note",
+      "name": {
+        "zh": "拾光日记本",
+        "en": "Moment Note"
+      },
+      "shortName": {
+        "zh": "拾光日记本",
+        "en": "Moment Note"
+      },
+      "icon": "images/momentnote.PNG",
+      "alt": "拾光日记本",
+      "type": "app",
+      "category": {
+        "zh": "📱 轻量本地日记应用",
+        "en": "📱 Lightweight Local Journal App"
+      },
+      "description": {
+        "zh": "拾光日记本是一款轻量、安静的本地日记应用，帮助你简单记录每天的心情与生活点滴。\n\n你可以为每一天创建记录，填写标题、日期、天气和心情，并通过多个自定义板块整理生活片段。\n\n主要功能：\n\n每日记录：每天一页，清晰直观\n\n自定义板块：自由设置图标、颜色、标题和内容\n\n自动保存：跨天自动保存，无需手动操作\n\n历史回顾：按时间倒序查看过往记录\n\n本地存储：数据仅保存在设备中，更安心\n\n拾光日记本不追求复杂功能，只为不打扰地陪你记录生活、整理心情。",
+        "en": "Moment Note is a lightweight, local journaling app designed to help you capture your daily moods and life moments with ease.\n\nYou can create a daily entry with a title, date, weather, and mood, and organize your thoughts through customizable sections.\n\nKey features:\n\nDaily entries: one clear page for each day\n\nCustom sections: freely set icons, colors, titles, and content\n\nAuto-save: entries are saved automatically when the day changes\n\nHistory view: browse past entries in reverse chronological order\n\nLocal storage: all data stays on your device for privacy and peace of mind\n\nMoment Note keeps things simple and distraction-free—perfect for quietly recording life and reflecting on your feelings."
+      },
+      "button": {
+        "text": {
+          "zh": "在App Store下载",
+          "en": "Download on App Store"
+        },
+        "link": "https://apps.apple.com/cn/app/%E6%8B%BE%E5%85%89%E6%97%A5%E8%AE%B0%E6%9C%AC/id6756984234",
+        "style": "blue"
+      }
     }
     
   ]
