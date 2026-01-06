@@ -49,10 +49,27 @@ class AppManager {
 
         // 渲染个人资料app
         this.renderProfileApp(gridContainer);
+        
+        // 计算已渲染的数量（包括profile）
+        let renderedCount = 1; // profile已渲染
 
-        // 渲染所有应用app
+        // 渲染所有应用app，特殊处理moment-note
         this.appsData.apps.forEach(app => {
+            // 如果遇到moment-note，先添加占位符让它换到下一行第一个
+            if (app.id === 'moment-note') {
+                const itemsPerRow = 4;
+                const currentRowPosition = renderedCount % itemsPerRow;
+                // 如果当前行还没填满，添加占位符填满当前行
+                if (currentRowPosition !== 0) {
+                    const placeholdersNeeded = itemsPerRow - currentRowPosition;
+                    for (let i = 0; i < placeholdersNeeded; i++) {
+                        gridContainer.insertAdjacentHTML('beforeend', '<div class="app-icon-container placeholder"></div>');
+                        renderedCount++;
+                    }
+                }
+            }
             this.renderAppCard(gridContainer, app);
+            renderedCount++;
         });
     }
 

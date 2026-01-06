@@ -244,6 +244,12 @@ body::before {
     max-width: 100px;
 }
 
+/* 占位符容器 - 用于保持网格对齐但不显示内容 */
+.app-icon-container.placeholder {
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* 个人资料App特殊样式 */
 .profile-app .app-icon {
     border: 4px solid rgba(255, 255, 255, 0.3);
